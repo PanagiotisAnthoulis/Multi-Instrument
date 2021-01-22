@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <script src="jquery-3.4.1.min.js"></script>
+  <title>Multi-Intrument</title>
+</head>
+<body>
+  <div class="piano">
+    <div data-note="C" class="key white"></div>
+    <div data-note="Db" class="key black"></div>
+    <div data-note="D" class="key white"></div>
+    <div data-note="Eb" class="key black"></div>
+    <div data-note="E" class="key white"></div>
+    <div data-note="F" class="key white"></div>
+    <div data-note="Gb" class="key black"></div>
+    <div data-note="G" class="key white"></div>
+    <div data-note="Ab" class="key black"></div>
+    <div data-note="A" class="key white"></div>
+    <div data-note="Bb" class="key black"></div>
+    <div data-note="B" class="key white"></div>
+
+    <audio id="C" src="mynotes/C.mp3"></audio>
+    <audio id="Db" src="mynotes/Db.mp3"></audio>
+    <audio id="D" src="mynotes/D.mp3"></audio>
+    <audio id="Eb" src="mynotes/Eb.mp3"></audio>
+    <audio id="E" src="mynotes/E.mp3"></audio>
+    <audio id="F" src="mynotes/F.mp3"></audio>
+    <audio id="Gb" src="mynotes/Gb.mp3"></audio>
+    <audio id="G" src="mynotes/G.mp3"></audio>
+    <audio id="Ab" src="mynotes/Ab.mp3"></audio>
+    <audio id="A" src="mynotes/A.mp3"></audio>
+    <audio id="Bb" src="mynotes/Bb.mp3"></audio>
+    <audio id="B" src="mynotes/B.mp3"></audio>
+  </div>
+  <!--
+  <div class="guitar">
+      <div  class="fret"></div>
+      <div  class="fret"></div>
+      <div  class="fret"></div>
+
+      <div class='guitar-note' data-note="E1"></div>
+      <div class='guitar-note' data-note="F1"></div>
+      <div class='guitar-note' data-note="Gb1"></div>
+      <div class='guitar-note' data-note="G1"></div>
+      <div class='guitar-note' data-note="Ab1"></div>
+      <div class='guitar-note' data-note="A1"></div>
+      <div class='guitar-note' data-note="Bb1"></div>
+      <div class='guitar-note' data-note="B1"></div>
+      <div class='guitar-note' data-note="C2"></div>
+      <div class='guitar-note' data-note="Db2"></div>
+      <div class='guitar-note' data-note="D2"></div>
+      <div class='guitar-note' data-note="Eb2"></div>
+      <div class='guitar-note' data-note="E2"></div>
+      <div class='guitar-note' data-note="F2"></div>
+      <div class='guitar-note' data-note="Gb2"></div>
+      <div class='guitar-note' data-note="G2"></div>
+      <div class='guitar-note' data-note="Ab2"></div>
+      <div class='guitar-note' data-note="A2"></div>
+      <div class='guitar-note' data-note="Bb2"></div>
+      <div class='guitar-note' data-note="B2"></div>
+      <div class='guitar-note' data-note="C3"></div>
+      <div class='guitar-note' data-note="Db3"></div>
+      <div class='guitar-note' data-note="D3"></div>
+      <div class='guitar-note' data-note="Eb3"></div>
+      <div class='guitar-note' data-note="E3"></div>
+      <div class='guitar-note' data-note="F3"></div>
+      <div class='guitar-note' data-note="Gb3"></div>
+      <div class='guitar-note' data-note="G3"></div>
+
+
+      <audio id="E1" src="guitar-notes/E1.wav"></audio>
+      <audio id="F1" src="guitar-notes/F1.wav"></audio>
+      <audio id="Gb1" src="guitar-notes/Gb1.wav"></audio>
+      <audio id="G1" src="guitar-notes/G1.wav"></audio>
+      
+      <audio id="Ab1" src="guitar-notes/Ab1.wav"></audio>
+      <audio id="A1" src="guitar-notes/A1.wav"></audio>
+      <audio id="Bb1" src="guitar-notes/Bb1.wav"></audio>
+      <audio id="A2" src="guitar-notes/A2.wav"></audio>
+      
+      <audio id="B1" src="guitar-notes/B1.wav"></audio>
+      <audio id="C2" src="guitar-notes/C2.wav"></audio>
+      <audio id="Db2" src="guitar-notes/Db2.wav"></audio>
+      <audio id="D2" src="guitar-notes/D2.wav"></audio>
+      <audio id="Eb2" src="guitar-notes/Eb2.wav"></audio>
+      
+      <audio id="E2" src="guitar-notes/E2.wav"></audio>
+      <audio id="F2" src="guitar-notes/F2.wav"></audio>
+      <audio id="Gb2" src="guitar-notes/Gb2.wav"></audio>
+      <audio id="G2" src="guitar-notes/G2.wav"></audio>
+      
+      <audio id="Ab2" src="guitar-notes/Ab2.wav"></audio>
+      <audio id="A2" src="guitar-notes/A2.wav"></audio>
+      <audio id="Bb2" src="guitar-notes/Bb2.wav"></audio>
+      <audio id="B2" src="guitar-notes/B2.wav"></audio>
+      
+      <audio id="C3" src="guitar-notes/C3.wav"></audio>
+      <audio id="Db3" src="guitar-notes/Db3.wav"></audio>
+      <audio id="D3" src="guitar-notes/D3.wav"></audio>
+      <audio id="Eb3" src="guitar-notes/Eb3.wav"></audio>
+      <audio id="E3" src="guitar-notes/E3.wav"></audio>
+      <audio id="F3" src="guitar-notes/F3.wav"></audio>
+      <audio id="Gb3" src="guitar-notes/Gb3.wav"></audio>
+      <audio id="G3" src="guitar-notes/G3.wav"></audio>
+
+      
+      
+      <audio id="C1" src="guitar-notes/C3.wav"></audio>
+      <audio id="F2" src="guitar-notes/F2.wav"></audio>
+      <audio id="Bb2" src="guitar-notes/Bb2.wav"></audio>
+      <audio id="D2" src="guitar-notes/D2.wav"></audio>
+      <audio id="G2" src="guitar-notes/G2.wav"></audio>
+  </div>
+-->
+  <div class='drums'>
+    <div id="kick" class='drum' data-note="kick">
+      <div class="inner_snare"></div>
+    </div>
+    <div id="snare" class='drum' data-note="snare">
+      <div class="inner_snare"></div>
+    </div>
+    <div id="low_tom" class='drum' data-note="low_tom">
+      <div class="inner_snare"></div>
+    </div>
+    <div id="high_tom" class='drum' data-note="high_tom">
+      <div class="inner_snare"></div>
+    </div>
+    <div id="crash" class='drum' data-note="crash">
+      <div class="inner_cymbal"></div>
+    </div>
+    <div id="ride" class='drum' data-note="ride">
+      <div class="inner_cymbal"></div>
+    </div>
+
+    <audio id="kick_audio" src="mynotes/kick.mp3"></audio>
+    <audio id="snare_audio" src="mynotes/snare.mp3"></audio>
+    <audio id="low_tom_audio" src="mynotes/low_tom.mp3"></audio>
+    <audio id="high_tom_audio" src="mynotes/high_tom.mp3"></audio>
+    <audio id="crash_audio" src="mynotes/crash.mp3"></audio>
+    <audio id="ride_audio" src="mynotes/ride.mp3"></audio>
+
+  </div>
+
+</body>
+</html>

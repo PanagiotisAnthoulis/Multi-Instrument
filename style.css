@@ -1,0 +1,162 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-image:url("https://iamluno.com/wp-content/uploads/2019/04/bkg_slide_001_3.jpg") ;
+    margin: 0;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .piano {
+    display: flex;
+    position: absolute;
+    bottom:2%;
+    left:50%;
+    transform: translate(-50%);
+  }
+  
+  .key {
+    height: calc(var(--width) * 4);
+    width: var(--width);
+  }
+  
+  .white {
+    --width: 100px;
+    background-color: white;
+    border: 1px solid #333;
+  }
+  
+  .white.active {
+    background-color: #CCC;
+  }
+  
+  .black {
+    --width: 60px;
+    background-color: black;
+    margin-left: calc(var(--width) / -2);
+    margin-right: calc(var(--width) / -2);
+    z-index: 2;
+  }
+  
+  .black.active {
+    background-color: #333;
+  }
+
+  .guitar{    
+      display: flex;
+      position: absolute;
+      top:16%;
+      background-color:rgb(63, 23, 23);
+      transform: rotate(90deg); 
+      width:450px;
+      height:20%;
+    }
+
+  .fret{
+      width:100%;
+      height:100%;
+      border:solid;
+      z-index: 5;
+  }
+
+
+  /*DRUMS*/
+
+  .drums{
+    position: absolute;
+    right:0%;
+    background-color: brown;
+    height:500px;
+    width:30%;
+  }
+
+  #snare{
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background-color: white;
+    z-index: 1;
+    border-radius: 50%;
+    border-style: solid;
+    margin-top:43%;
+    margin-left:43%;
+  }
+
+#kick{
+  position: absolute;
+  filter: invert(12%);
+  width: 90px;
+  height: 90px;
+  background-color: white;
+  z-index: 1;
+  border-radius: 50%;
+  border-style: solid; 
+  margin-top:30%;
+  margin-left:50%;
+  }
+
+#low_tom{
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background-color: white;
+  z-index: 1;
+  border-radius: 50%;
+  border-style: solid;
+  margin-top: 30%;
+  margin-left: 36%;
+}
+
+#high_tom{
+  position: absolute;
+  width: 85px;
+  height: 85px;
+  background-color: white;
+  z-index:1;
+  border-radius: 50%;
+  border-style: solid;
+  margin-top: 17%;
+  margin-left: 43%;
+}
+
+#crash{
+  position: absolute;
+  width: 85px;
+  height:85px;
+  background-color: darkgoldenrod;
+  border-radius: 100%;
+  border-style: solid;
+  margin-top:19%;
+  margin-left:25%;
+  z-index: 2;
+}
+
+#ride{
+  position: absolute;
+  width: 85px;
+  height:85px;
+  background-color: darkgoldenrod;
+  border-radius: 100%;
+  border-style: solid;
+  margin-top:40%;
+  margin-left:25%;
+}
+
+.inner_snare{
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle,black,white,white);
+  border-radius: 100%;
+  display: none;
+}
+
+.inner_cymbal{
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle,black,darkgoldenrod,darkgoldenrod);
+  border-radius: 100%;
+  display: none;
+}
